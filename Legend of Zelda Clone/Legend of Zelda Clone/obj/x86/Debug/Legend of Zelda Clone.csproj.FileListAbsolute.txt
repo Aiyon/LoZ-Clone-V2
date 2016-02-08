@@ -1,0 +1,162 @@
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Legend of Zelda Clone.exe
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Legend of Zelda Clone.pdb
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\MonoGame.Framework.dll
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.dll
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XAudio2.dll
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D11.dll
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.DXGI.dll
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct2D1.dll
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XInput.dll
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.RawInput.dll
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D9.dll
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\MonoGame.Framework.xml
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.xml
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XAudio2.xml
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D11.xml
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.DXGI.xml
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct2D1.xml
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XInput.xml
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.RawInput.xml
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D9.xml
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.csprojResolveAssemblyReference.cache
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.exe
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.pdb
+C:\Users\Barney\Desktop\Monono\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Content\empty.xnb
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.exe
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.pdb
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Content\empty.xnb
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Legend of Zelda Clone.exe
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Legend of Zelda Clone.pdb
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\MonoGame.Framework.dll
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.MediaFoundation.dll
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.dll
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XAudio2.dll
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D11.dll
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.DXGI.dll
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct2D1.dll
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XInput.dll
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.RawInput.dll
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D9.dll
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\MonoGame.Framework.xml
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.MediaFoundation.xml
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.xml
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XAudio2.xml
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D11.xml
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.DXGI.xml
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct2D1.xml
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XInput.xml
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.RawInput.xml
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D9.xml
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.csprojResolveAssemblyReference.cache
+F:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Content\OverworldTiles.xnb
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.exe
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.pdb
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Content\empty.xnb
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Content\OverworldTiles.xnb
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Legend of Zelda Clone.exe
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Legend of Zelda Clone.pdb
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\MonoGame.Framework.dll
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.MediaFoundation.dll
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.dll
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XAudio2.dll
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D11.dll
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.DXGI.dll
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct2D1.dll
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XInput.dll
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.RawInput.dll
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D9.dll
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\MonoGame.Framework.xml
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.MediaFoundation.xml
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.xml
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XAudio2.xml
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D11.xml
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.DXGI.xml
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct2D1.xml
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XInput.xml
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.RawInput.xml
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D9.xml
+E:\Third Year\Project\Legend of Zelda Clone\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.csprojResolveAssemblyReference.cache
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.exe
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.pdb
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\Content\empty.xnb
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\Content\OverworldTiles.xnb
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\Legend of Zelda Clone.exe
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\Legend of Zelda Clone.pdb
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\MonoGame.Framework.dll
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.MediaFoundation.dll
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.dll
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XAudio2.dll
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D11.dll
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.DXGI.dll
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct2D1.dll
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XInput.dll
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.RawInput.dll
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D9.dll
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\MonoGame.Framework.xml
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.MediaFoundation.xml
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.xml
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XAudio2.xml
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D11.xml
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.DXGI.xml
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct2D1.xml
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XInput.xml
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.RawInput.xml
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D9.xml
+E:\Third Year\Project\Legend of Zelda Clone - Collision\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.csprojResolveAssemblyReference.cache
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.exe
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.pdb
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\Content\empty.xnb
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\Content\OverworldTiles.xnb
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\Legend of Zelda Clone.exe
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\Legend of Zelda Clone.pdb
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\MonoGame.Framework.dll
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.dll
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XAudio2.dll
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D11.dll
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.DXGI.dll
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct2D1.dll
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XInput.dll
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.RawInput.dll
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D9.dll
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\MonoGame.Framework.xml
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.xml
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XAudio2.xml
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D11.xml
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.DXGI.xml
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct2D1.xml
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XInput.xml
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.RawInput.xml
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D9.xml
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Collision\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.csprojResolveAssemblyReference.cache
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.exe
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.pdb
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\Content\empty.xnb
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\Content\OverworldTiles.xnb
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\Legend of Zelda Clone.exe
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\Legend of Zelda Clone.pdb
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\MonoGame.Framework.dll
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.dll
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XAudio2.dll
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D11.dll
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.DXGI.dll
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct2D1.dll
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XInput.dll
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.RawInput.dll
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D9.dll
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\MonoGame.Framework.xml
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.xml
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XAudio2.xml
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D11.xml
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.DXGI.xml
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct2D1.xml
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XInput.xml
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.RawInput.xml
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D9.xml
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.csprojResolveAssemblyReference.cache
+C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\Legend of Zelda Clone.exe.config
