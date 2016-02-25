@@ -67,5 +67,14 @@ namespace Legend_of_Zelda_Clone
         }
 
         public static int UIOffset = 72;
+
+        public enum gState : int
+        {
+            overworld = 0,
+            dungeon1,
+            dungeon2,
+            caves,
+
+        }
     }
 }

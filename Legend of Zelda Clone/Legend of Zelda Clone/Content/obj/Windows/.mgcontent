@@ -4,7 +4,9 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Computing/Desktop/Legend of Zelda Clone - Zone Transitions/Legend of Zelda Clone/Content/empty.png</File>
-    <File>C:/Users/Computing/Desktop/Legend of Zelda Clone - Zone Transitions/Legend of Zelda Clone/Content/OverworldTiles.png</File>
+    <File>C:/Users/Barney/Desktop/LoZ-Clone-V2/Legend of Zelda Clone/Legend of Zelda Clone/Content/empty.png</File>
+    <File>C:/Users/Barney/Desktop/LoZ-Clone-V2/Legend of Zelda Clone/Legend of Zelda Clone/Content/OverworldTiles.png</File>
+    <File>C:/Users/Barney/Desktop/LoZ-Clone-V2/Legend of Zelda Clone/Legend of Zelda Clone/Content/Cave map.png</File>
+    <File>C:/Users/Barney/Desktop/LoZ-Clone-V2/Legend of Zelda Clone/Legend of Zelda Clone/Content/Cave tiles.png</File>
   </SourceFiles>
 </SourceFileCollection>

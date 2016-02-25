@@ -160,3 +160,33 @@ C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Ze
 C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D9.xml
 C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.csprojResolveAssemblyReference.cache
 C:\Users\Computing\Desktop\Legend of Zelda Clone - Zone Transitions\Legend of Zelda Clone\bin\Windows\Debug\Legend of Zelda Clone.exe.config
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Legend of Zelda Clone.exe.config
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.exe
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.pdb
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Content\empty.xnb
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Content\OverworldTiles.xnb
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Legend of Zelda Clone.exe
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Legend of Zelda Clone.pdb
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\MonoGame.Framework.dll
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.dll
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XAudio2.dll
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D11.dll
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.DXGI.dll
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct2D1.dll
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XInput.dll
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.RawInput.dll
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D9.dll
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\MonoGame.Framework.xml
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.xml
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XAudio2.xml
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D11.xml
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.DXGI.xml
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct2D1.xml
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.XInput.xml
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.RawInput.xml
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\SharpDX.Direct3D9.xml
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\obj\x86\Debug\Legend of Zelda Clone.csprojResolveAssemblyReference.cache
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Content\Cave map.xnb
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Content\Cave tiles.xnb

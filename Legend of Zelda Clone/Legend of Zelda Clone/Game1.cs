@@ -19,11 +19,17 @@ namespace Legend_of_Zelda_Clone
         int[,] OWMap = new int[256, 88];
         int[,] UWMap1 = new int[256, 88];
         int[,] UWMap2 = new int[256, 88];
+        //int[,] caveMap = new int[64, 44];
         int[,] collisionMap = new int[256, 88];
+        int[,] UWCMap1 = new int[256, 88];
+        int[,] UWCMap2 = new int[256, 88];
+        int[,] caveCMap = new int[64, 44];
         int[,] r1T = new int[16, 11];
-
+        
         KeyboardState oldState;
         KeyboardState newState;
+
+        Globals.gState currentState;
 
         player Link;
 
@@ -38,6 +44,7 @@ namespace Legend_of_Zelda_Clone
 
         private Texture2D empty;
         private Texture2D OWSpriteSheet;
+        private Texture2D caveMap;
         
         public Game1() : base()
         {
@@ -72,9 +79,13 @@ namespace Legend_of_Zelda_Clone
             // TODO: use this.Content to load your game content here
             empty = Content.Load<Texture2D>("empty");
             OWSpriteSheet = Content.Load<Texture2D>("OverworldTiles");
+            caveMap = Content.Load<Texture2D>("Cave map");
+
+            currentState = Globals.gState.overworld;
 
             string tileString;
             string colString;
+            string caveColString;
             using (StreamReader sr = new StreamReader("OWTileMap.txt"))//"Room 1 test.txt"))
             {
                 tileString = sr.ReadLine();
@@ -87,20 +98,48 @@ namespace Legend_of_Zelda_Clone
                     colString += sr.ReadLine();
                 }
             }
+            using (StreamReader sr = new StreamReader("Cavelision.txt"))//"Room 1 test.txt"))
+            {
+                caveColString = sr.ReadLine();
+                for (int i = 0; i < 45; i++)
+                {
+                    caveColString += sr.ReadLine();
+                }
+            }
 
             string[] tsSplit = tileString.Split(' ');
             string[] colSplit = colString.Split(' ');
+            string[] caveSplit = caveColString.Split(' ');
 
             for (int j = 0; j < 88; j++)
             {
                 for(int i = 0; i < 256; i++)
                 {
                     tileMap[i,j] = int.Parse(tsSplit[(j*256)+i], System.Globalization.NumberStyles.HexNumber); //Convert.ToInt32(tsSplit[(j*16) + i]);
+                    
                     if(colSplit[(j*256)+i] == "X")
                     {
                         collisionMap[i,j] = 1;  //1 = collide.
                     }
-                    else collisionMap[i,j] = 0;
+                    else if (colSplit[(j * 256) + i] == "T")
+                    {
+                        collisionMap[i, j] = 2;  //2 = transition tile
+                    }
+                    else
+                        collisionMap[i, j] = 0;
+
+                    if (i < 64 && j < 44)
+                    {
+                        if (caveSplit[(j * 64) + i] == "X")
+                        {
+                            caveCMap[i, j] = 1;  //1 = collide.
+                        }
+                        else if (caveSplit[(j * 64) + i] == "T")
+                        {
+                            caveCMap[i, j] = 2; //2 = transition tile
+                        }
+                        else caveCMap[i, j] = 0;
+                    }
                 }
             }
 
@@ -197,10 +236,41 @@ namespace Legend_of_Zelda_Clone
                 }
 
                 //CHECK 2 - if player would start to move inside a wall
-                if (!checkCollision(offsetPos, movCheck))
+                switch (currentState)
                 {
-                    Link.move(movAmount/16);
+                    case Globals.gState.overworld:
+                        if(!checkCollision(offsetPos, movCheck, collisionMap))
+                        {
+                        Link.move(movAmount/16);
+                        }
+                        break;
+
+                    case Globals.gState.caves:
+                        if (!checkCollision(offsetPos, movCheck, caveCMap))
+                        {
+                            Link.move(movAmount / 16);
+                        }
+                        break;
+
+                    case Globals.gState.dungeon1:
+                        if (!checkCollision(offsetPos, movCheck, UWMap1))
+                        {
+                            Link.move(movAmount / 16);
+                        }
+                        break;
+
+                    case Globals.gState.dungeon2:
+                        if (!checkCollision(offsetPos, movCheck, UWMap2))
+                        {
+                            Link.move(movAmount / 16);
+                        }
+                        break;
+
                 }
+                
+                
+                
+
             }
 
             oldState = newState;
@@ -241,28 +311,41 @@ namespace Legend_of_Zelda_Clone
             spriteBatch.Begin();
             // TODO: Add your drawing code here
 
-            for (int j = 0; j < 11; j++)
+            //OVERWORLD DRAWING
+            if (currentState == Globals.gState.overworld)
             {
-                for (int i = 0; i < 16; i++)
+                for (int j = 0; j < 11; j++)
                 {
-                    Vector2 vTemp;
-                    vTemp.X = tileMap[i+(int)viewPort.X,j+(int)viewPort.Y]%20;
-                    vTemp.Y = (tileMap[i+(int)viewPort.X,j+(int)viewPort.Y] - vTemp.X)/20; 
+                    for (int i = 0; i < 16; i++)
+                    {
+                        Vector2 vTemp;
+                        vTemp.X = tileMap[i + (int)viewPort.X, j + (int)viewPort.Y] % 20;
+                        vTemp.Y = (tileMap[i + (int)viewPort.X, j + (int)viewPort.Y] - vTemp.X) / 20;
 
-                    spriteBatch.Draw(OWSpriteSheet, new Rectangle(i * 16 * resScale, ((j * 16) + Globals.UIOffset)* resScale, 16 * resScale, 16 * resScale),
-                        new Rectangle((int)(17*vTemp.X)+1, (int)(17*vTemp.Y)+1, 16, 16) , Color.White);  //draws current room using TileMap.
+                        spriteBatch.Draw(OWSpriteSheet, new Rectangle(i * 16 * resScale, ((j * 16) + Globals.UIOffset) * resScale, 16 * resScale, 16 * resScale),
+                            new Rectangle((int)(17 * vTemp.X) + 1, (int)(17 * vTemp.Y) + 1, 16, 16), Color.White);  //draws current room using TileMap.
 
-                    
-                    //if(collisionMap[i + (int)viewPort.X, j + (int)viewPort.Y] == 1)
-                    //{ spriteBatch.Draw(empty, new Rectangle(i * 16 * resScale, ((j * 16) + Globals.UIOffset) * resScale, 16 * resScale, 16 * resScale), new Color(212, 0, 212)); }      //Overlays map with collision map to confirm it matches.
-                    
 
-               }
+                        //if(collisionMap[i + (int)viewPort.X, j + (int)viewPort.Y] == 1)
+                        //{ spriteBatch.Draw(empty, new Rectangle(i * 16 * resScale, ((j * 16) + Globals.UIOffset) * resScale, 16 * resScale, 16 * resScale), new Color(212, 0, 212)); }      //Overlays map with collision map to confirm it matches.
+
+                    }
+                }
+                                
+            }
+            //CAVE DRAW
+            else if (currentState == Globals.gState.caves)
+            {
+                Vector2 vTemp = new Vector2();
+//                vTemp.X = tileMap[(int)viewPort.X, (int)viewPort.Y] % 20;
+//                vTemp.Y = (tileMap[(int)viewPort.X, (int)viewPort.Y] - vTemp.X) / 20;
+
+                spriteBatch.Draw(caveMap, new Rectangle(0, Globals.UIOffset * resScale, 256 * resScale, 176 * resScale),
+                            new Rectangle((int)(17 * vTemp.X), (int)(17 * vTemp.Y), 256, 176), Color.White);  
             }
 
             Vector2 lPos = Link.getPos() - viewPort;
-            spriteBatch.Draw(empty, new Rectangle((int)(lPos.X*16),(int)(lPos.Y*16)+Globals.UIOffset,16,16), Color.White);
-
+            spriteBatch.Draw(empty, new Rectangle((int)(lPos.X * 16), (int)(lPos.Y * 16) + Globals.UIOffset, 16, 16), Color.White);
             spriteBatch.Draw(empty, new Rectangle(0, 0, 256, Globals.UIOffset), Color.Black);
 
             spriteBatch.End();
@@ -270,7 +353,7 @@ namespace Legend_of_Zelda_Clone
             base.Draw(gameTime);
         }
 
-        protected bool checkCollision(Vector2 position, Vector2 direction)
+        protected bool checkCollision(Vector2 position, Vector2 direction, int[,] map)
         {
             for (int i = -1; i < 2; i++)
             {
@@ -282,7 +365,7 @@ namespace Legend_of_Zelda_Clone
                 int xPos = (int)(position.X + (direction.X / 16));
                 int yPos = (int)(position.Y + (direction.Y / 16));
                 
-                if (collisionMap[xPos, yPos] == 1)
+                if (map[xPos, yPos] == 1)
                     return true;
 
                 direction.X -= edgeCheck.Y; direction.Y -= edgeCheck.X;       //originally forget to reset edge check, would check top top middle instead of top middle bottom.
