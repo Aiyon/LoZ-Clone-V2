@@ -66,7 +66,7 @@ namespace Legend_of_Zelda_Clone
 
         }
 
-        public static int UIOffset = 72;
+        public static int UIOffset = 56;
 
         public enum gState : int
         {
@@ -74,6 +74,7 @@ namespace Legend_of_Zelda_Clone
             dungeon1,
             dungeon2,
             caves,
+            menus,
 
         }
     }

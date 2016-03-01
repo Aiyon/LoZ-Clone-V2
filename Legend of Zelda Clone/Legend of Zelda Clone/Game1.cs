@@ -43,7 +43,7 @@ namespace Legend_of_Zelda_Clone
         Vector2 MCDir;
         int tempSteps = 0;
 
-        Vector2 resolution = new Vector2(256,240);
+        Vector2 resolution = new Vector2(256,224);  //IS NOT 240, is 224!
         int resScale = 1;
 
         Vector2 viewPort;
@@ -51,6 +51,9 @@ namespace Legend_of_Zelda_Clone
         private Texture2D empty;
         private Texture2D OWSpriteSheet;
         private Texture2D caveMap;
+        private Texture2D equippedFrame;
+
+        private SpriteFont LoZText;
 
         private string[] caveText;  //38 of them, not counting stairs down or dungeons.
         private int[] caveNPC;
@@ -90,6 +93,8 @@ namespace Legend_of_Zelda_Clone
             empty = Content.Load<Texture2D>("empty");
             OWSpriteSheet = Content.Load<Texture2D>("OverworldTiles");
             caveMap = Content.Load<Texture2D>("Cave map");
+            equippedFrame = Content.Load<Texture2D>("ItemFrame");
+            LoZText = Content.Load<SpriteFont>("Pixel Emulator");
 
             currentState = Globals.gState.overworld;
 
@@ -201,7 +206,9 @@ namespace Legend_of_Zelda_Clone
 
             // TODO: Add your update logic here
             if (mapChange) updateZone();
+
             updatePlayer(gameTime.ElapsedGameTime.TotalSeconds);
+            //
 
             base.Update(gameTime);
         }
@@ -436,9 +443,31 @@ namespace Legend_of_Zelda_Clone
 
             }
 
-            Vector2 lPos = Link.getPos() - viewPort;
-            spriteBatch.Draw(empty, new Rectangle((int)(lPos.X * 16), (int)(lPos.Y * 16) + Globals.UIOffset, 16, 16), Color.White);
-            spriteBatch.Draw(empty, new Rectangle(0, 0, 256, Globals.UIOffset), Color.Black);
+            //UI DRAWING
+            if (currentState != Globals.gState.menus)
+            {
+                Vector2 lPos = Link.getPos() - viewPort;
+                spriteBatch.Draw(empty, new Rectangle((int)(lPos.X * 16), (int)(lPos.Y * 16) + Globals.UIOffset, 16, 16), Color.White);
+                spriteBatch.Draw(empty, new Rectangle(0, 0, 256, Globals.UIOffset), Color.Black);
+
+                //draw frames
+                spriteBatch.Draw(equippedFrame, new Rectangle(123, 19, 18, 26), Color.White);   
+                spriteBatch.Draw(equippedFrame, new Rectangle(147, 19, 18, 26), Color.White);
+
+                //draw minimap
+                spriteBatch.Draw(empty, new Rectangle(16, 16, 64, 32), Color.Gray);
+                spriteBatch.Draw(empty, new Rectangle((int)(viewPort.X/16) + 16, (int)(viewPort.Y / 16) + 16, 3, 3), Color.LimeGreen); 
+
+                //draw text
+                spriteBatch.DrawString(LoZText, "B", new Vector2(128, 13), Color.White); //all text positions -3 from where they should be to offset blank space at top of font.
+                spriteBatch.DrawString(LoZText, "A", new Vector2(152, 13), Color.White);
+                spriteBatch.DrawString(LoZText, "-LIFE-", new Vector2(184, 13), Color.Red);
+
+                spriteBatch.DrawString(LoZText, "X0", new Vector2(96, 13), Color.White);
+                spriteBatch.DrawString(LoZText, "X0", new Vector2(96, 29), Color.White);
+                spriteBatch.DrawString(LoZText, "X0", new Vector2(96, 37), Color.White);
+
+            }
 
             spriteBatch.End();
 

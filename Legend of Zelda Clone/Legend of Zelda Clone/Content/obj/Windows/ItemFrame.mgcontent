@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Barney/Desktop/LoZ-Clone-V2/Legend of Zelda Clone/Legend of Zelda Clone/Content/empty.png</SourceFile>
-  <SourceTime>2016-02-23T01:32:22.4543284+00:00</SourceTime>
-  <DestFile>C:/Users/Barney/Desktop/LoZ-Clone-V2/Legend of Zelda Clone/Legend of Zelda Clone/Content/bin/Windows/empty.xnb</DestFile>
-  <DestTime>2016-03-01T21:13:40.1261886+00:00</DestTime>
+  <SourceFile>C:/Users/Barney/Desktop/LoZ-Clone-V2/Legend of Zelda Clone/Legend of Zelda Clone/Content/ItemFrame.png</SourceFile>
+  <SourceTime>2016-03-01T21:38:57.6318227+00:00</SourceTime>
+  <DestFile>C:/Users/Barney/Desktop/LoZ-Clone-V2/Legend of Zelda Clone/Legend of Zelda Clone/Content/bin/Windows/ItemFrame.xnb</DestFile>
+  <DestTime>2016-03-01T21:39:08.2288993+00:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2015-02-15T18:25:40+00:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

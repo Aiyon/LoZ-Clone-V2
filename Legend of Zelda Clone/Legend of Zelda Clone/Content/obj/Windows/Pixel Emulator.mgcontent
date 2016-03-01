@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/Barney/Desktop/LoZ-Clone-V2/Legend of Zelda Clone/Legend of Zelda Clone/Content/Pixel Emulator.spritefont</SourceFile>
+  <SourceTime>2016-03-01T21:51:06.9805192+00:00</SourceTime>
+  <DestFile>C:/Users/Barney/Desktop/LoZ-Clone-V2/Legend of Zelda Clone/Legend of Zelda Clone/Content/bin/Windows/Pixel Emulator.xnb</DestFile>
+  <DestTime>2016-03-01T21:51:13.0238649+00:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2015-02-15T18:25:40+00:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2015-02-15T18:25:40+00:00</ProcessorTime>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Compressed</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>
