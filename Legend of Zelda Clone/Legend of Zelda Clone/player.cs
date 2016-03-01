@@ -45,6 +45,9 @@ namespace Legend_of_Zelda_Clone
 
         public Vector2 getPos()
         { return position; }
-        
+
+        public void setPos(Vector2 pos)
+        { position = pos; }
+
     }
 }

@@ -25,6 +25,12 @@ namespace Legend_of_Zelda_Clone
         int[,] UWCMap2 = new int[256, 88];
         int[,] caveCMap = new int[64, 44];
         int[,] r1T = new int[16, 11];
+
+        Vector2[] tStart;
+        Globals.gState[] tSMap;
+        Vector2[] tDest;
+        Globals.gState[] tDMap;
+        int numT;
         
         KeyboardState oldState;
         KeyboardState newState;
@@ -45,6 +51,10 @@ namespace Legend_of_Zelda_Clone
         private Texture2D empty;
         private Texture2D OWSpriteSheet;
         private Texture2D caveMap;
+
+        private string[] caveText;  //38 of them, not counting stairs down or dungeons.
+        private int[] caveNPC;
+        //LIST OF ITEMS IN CAVE, SOMEHOW.
         
         public Game1() : base()
         {
@@ -83,14 +93,20 @@ namespace Legend_of_Zelda_Clone
 
             currentState = Globals.gState.overworld;
 
+            numT = 3;
+            tStart = new Vector2[numT];
+            tSMap = new Globals.gState[numT];
+            tDest = new Vector2[numT];
+            tDMap = new Globals.gState[numT];
+
             string tileString;
             string colString;
             string caveColString;
-            using (StreamReader sr = new StreamReader("OWTileMap.txt"))//"Room 1 test.txt"))
+            using (StreamReader sr = new StreamReader("OWTileMap.txt"))
             {
                 tileString = sr.ReadLine();
             }
-            using (StreamReader sr = new StreamReader("OWCollision.txt"))//"Room 1 test.txt"))
+            using (StreamReader sr = new StreamReader("OWCollision.txt"))
             {
                 colString = sr.ReadLine();
                 for(int i = 0; i<87; i++)
@@ -98,12 +114,34 @@ namespace Legend_of_Zelda_Clone
                     colString += sr.ReadLine();
                 }
             }
-            using (StreamReader sr = new StreamReader("Cavelision.txt"))//"Room 1 test.txt"))
+            using (StreamReader sr = new StreamReader("Cavelision.txt"))
             {
                 caveColString = sr.ReadLine();
                 for (int i = 0; i < 45; i++)
                 {
                     caveColString += sr.ReadLine();
+                }
+            }
+            using (StreamReader sr = new StreamReader("Transitions.txt"))
+            {
+                for (int i = 0; i < numT; i++)
+                {
+                    string transition = sr.ReadLine();
+                    string[] tSplit = transition.Split('|');
+
+                    string[] vtS = tSplit[0].Split(',');
+                    tStart[i].X = float.Parse(vtS[0]); tStart[i].Y = float.Parse(vtS[1]);
+                    vtS = tSplit[2].Split(',');
+                    tDest[i].X = float.Parse(vtS[0]); tDest[i].Y = float.Parse(vtS[1]);
+
+                    Globals.gState test;
+                    if(Enum.TryParse<Globals.gState>(tSplit[1], out test))
+                        tSMap[i] = test;
+                    if (Enum.TryParse<Globals.gState>(tSplit[3], out test))
+                        tDMap[i] = test;
+                    
+
+
                 }
             }
 
@@ -201,38 +239,76 @@ namespace Legend_of_Zelda_Clone
                 moving = true;
             }
 
+            //CHECK 0.5 - if player is on a transition tile.
+            //N.B. - Has to be at start so as to be before movement position checks are made, because collision uses offsetPos. Will also mean player finishes movement before activating animation
+            for (int i = 0; i < numT; i++)
+            {
+                Vector2 lTemp = new Vector2();
+                lTemp.X = Convert.ToSingle(Math.Round(Link.getPos().X));
+                lTemp.Y = Convert.ToSingle(Math.Round(Link.getPos().Y));
+
+                if (currentState == tSMap[i])
+                {
+                    if (tStart[i] == lTemp)
+                    {
+                        //DO THINGS.
+                        Link.setPos(new Vector2(0));
+                        Vector2 vTemp = new Vector2(tDest[i].X%16, tDest[i].Y%11);
+                        viewPort = tDest[i] - vTemp;
+                        currentState = tDMap[i];
+                        Link.move(tDest[i]);
+                    }
+                }
+                /*else if (currentState == tDMap[i])
+                {
+                    if (tDest[i] == lTemp)
+                    {
+                        DO OTHER THINGS.      -- Maybe not.
+                        Link.setPos(new Vector2(0));
+                        Vector2 vTemp = new Vector2(tStart[i].X % 16, tStart[i].Y % 11);
+                        viewPort = tStart[i] - vTemp;
+                        currentState = tSMap[i];
+                        Link.move(tStart[i]);
+                    }
+                } //*/
+            }
+
             if (moving && !mapChange)
             {
+
                 Vector2 offsetPos = new Vector2(0.5f);
                 offsetPos += Link.getPos();     //uses center of link as position instead of top left, allows for standardised collision checking
                 movCheck += movAmount;
 
                 //CHECK 1 - if player position would go off edge of map: zone transition.
-                Vector2 zoneCheck = (movCheck/new Vector2(16)) + offsetPos - viewPort;
-                if (zoneCheck.X < 0)
+                if (currentState != Globals.gState.caves) //Check not needed for caves as caves are all singular zones that operate off transition tiles instead of edges.
                 {
-                    offsetPos = Link.getPos();
-                    mapChange = true;
-                    MCDir = new Vector2(-1, 0);
-                    tempSteps = 20;
-                }
-                if (zoneCheck.X > 16)
-                {
-                    mapChange = true;
-                    MCDir = new Vector2(1, 0);
-                    tempSteps = 20;
-                }
-                if (zoneCheck.Y < 0)
-                {
-                    mapChange = true;
-                    MCDir = new Vector2(0, -1);
-                    tempSteps = 20;
-                }
-                if (zoneCheck.Y > 10.5)
-                {
-                    mapChange = true;
-                    MCDir = new Vector2(0, 1);
-                    tempSteps = 20;
+                    Vector2 zoneCheck = (movCheck / new Vector2(16)) + offsetPos - viewPort;
+                    if (zoneCheck.X < 0)
+                    {
+                        offsetPos = Link.getPos();
+                        mapChange = true;
+                        MCDir = new Vector2(-1, 0);
+                        tempSteps = 20;
+                    }
+                    else if (zoneCheck.X > 16)
+                    {
+                        mapChange = true;
+                        MCDir = new Vector2(1, 0);
+                        tempSteps = 20;
+                    }
+                    else if (zoneCheck.Y < 0)
+                    {
+                        mapChange = true;
+                        MCDir = new Vector2(0, -1);
+                        tempSteps = 20;
+                    }
+                    else if (zoneCheck.Y > 10.5)
+                    {
+                        mapChange = true;
+                        MCDir = new Vector2(0, 1);
+                        tempSteps = 20;
+                    }
                 }
 
                 //CHECK 2 - if player would start to move inside a wall
@@ -340,8 +416,24 @@ namespace Legend_of_Zelda_Clone
 //                vTemp.X = tileMap[(int)viewPort.X, (int)viewPort.Y] % 20;
 //                vTemp.Y = (tileMap[(int)viewPort.X, (int)viewPort.Y] - vTemp.X) / 20;
 
-                spriteBatch.Draw(caveMap, new Rectangle(0, Globals.UIOffset * resScale, 256 * resScale, 176 * resScale),
-                            new Rectangle((int)(17 * vTemp.X), (int)(17 * vTemp.Y), 256, 176), Color.White);  
+                spriteBatch.Draw(caveMap, new Rectangle(0, Globals.UIOffset * resScale, 256 * resScale, 176 * resScale), Color.White);
+
+                /*for (int j = 0; j < 11; j++)
+                {
+                    for (int i = 0; i < 16; i++)
+                    {
+                        if(caveCMap[i + (int)viewPort.X, j + (int)viewPort.Y] == 1)
+                        { spriteBatch.Draw(empty, new Rectangle(i * 16 * resScale, ((j * 16) + Globals.UIOffset) * resScale, 16 * resScale, 16 * resScale), new Color(212, 0, 212)); }      //Overlays map with collision map to confirm it matches.
+                    }
+                }   //*/
+
+                //DRAW ANIMATED FIRE.
+
+                //IF FIRST TIME IN CAVE, DO INTRO SHIZZLE (draw text).
+
+
+
+
             }
 
             Vector2 lPos = Link.getPos() - viewPort;
