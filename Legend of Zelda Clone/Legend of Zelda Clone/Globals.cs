@@ -77,5 +77,13 @@ namespace Legend_of_Zelda_Clone
             menus,
 
         }
+
+        public enum NPCs : int
+        {
+            man = 0,
+            woman,
+            boy,
+            goblin,
+        }
     }
 }

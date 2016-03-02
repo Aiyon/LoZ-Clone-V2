@@ -43,6 +43,9 @@ namespace Legend_of_Zelda_Clone
         public int getHealth()
         { return health; }
 
+        public int getMax()
+        { return maxHealth; }
+
         public Vector2 getPos()
         { return position; }
 

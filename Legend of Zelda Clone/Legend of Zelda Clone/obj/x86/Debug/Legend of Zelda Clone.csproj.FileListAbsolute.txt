@@ -192,3 +192,4 @@ C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone
 C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Content\Cave tiles.xnb
 C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Content\Pixel Emulator.xnb
 C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Content\ItemFrame.xnb
+C:\Users\Barney\Desktop\LoZ-Clone-V2\Legend of Zelda Clone\Legend of Zelda Clone\bin\Windows\Debug\Content\Heart Tiles.xnb

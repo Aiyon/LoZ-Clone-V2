@@ -50,6 +50,7 @@ namespace Legend_of_Zelda_Clone
 
         private Texture2D empty;
         private Texture2D OWSpriteSheet;
+        private Texture2D heartsSheet;
         private Texture2D caveMap;
         private Texture2D equippedFrame;
 
@@ -92,6 +93,8 @@ namespace Legend_of_Zelda_Clone
             // TODO: use this.Content to load your game content here
             empty = Content.Load<Texture2D>("empty");
             OWSpriteSheet = Content.Load<Texture2D>("OverworldTiles");
+            heartsSheet = Content.Load<Texture2D>("Heart Tiles");
+
             caveMap = Content.Load<Texture2D>("Cave map");
             equippedFrame = Content.Load<Texture2D>("ItemFrame");
             LoZText = Content.Load<SpriteFont>("Pixel Emulator");
@@ -443,12 +446,15 @@ namespace Legend_of_Zelda_Clone
 
             }
 
+            Vector2 lPos = Link.getPos() - viewPort;
+            spriteBatch.Draw(empty, new Rectangle((int)(lPos.X * 16 * resScale), ((int)(lPos.Y * 16) + Globals.UIOffset)*resScale, 16*resScale, 16*resScale), Color.White);
+            
+
             //UI DRAWING
             if (currentState != Globals.gState.menus)
             {
-                Vector2 lPos = Link.getPos() - viewPort;
-                spriteBatch.Draw(empty, new Rectangle((int)(lPos.X * 16), (int)(lPos.Y * 16) + Globals.UIOffset, 16, 16), Color.White);
-                spriteBatch.Draw(empty, new Rectangle(0, 0, 256, Globals.UIOffset), Color.Black);
+                //back box
+                spriteBatch.Draw(empty, new Rectangle(0, 0, 256 * resScale, Globals.UIOffset * resScale), Color.Black);
 
                 //draw frames
                 spriteBatch.Draw(equippedFrame, new Rectangle(123, 19, 18, 26), Color.White);   
@@ -456,7 +462,7 @@ namespace Legend_of_Zelda_Clone
 
                 //draw minimap
                 spriteBatch.Draw(empty, new Rectangle(16, 16, 64, 32), Color.Gray);
-                spriteBatch.Draw(empty, new Rectangle((int)(viewPort.X/16) + 16, (int)(viewPort.Y / 16) + 16, 3, 3), Color.LimeGreen); 
+                spriteBatch.Draw(empty, new Rectangle((int)(viewPort.X/3.84f) + 16, (int)(viewPort.Y / 2.75f) + 16, 3, 3), Color.LimeGreen); 
 
                 //draw text
                 spriteBatch.DrawString(LoZText, "B", new Vector2(128, 13), Color.White); //all text positions -3 from where they should be to offset blank space at top of font.
@@ -466,6 +472,24 @@ namespace Legend_of_Zelda_Clone
                 spriteBatch.DrawString(LoZText, "X0", new Vector2(96, 13), Color.White);
                 spriteBatch.DrawString(LoZText, "X0", new Vector2(96, 29), Color.White);
                 spriteBatch.DrawString(LoZText, "X0", new Vector2(96, 37), Color.White);
+
+                for (int i = 1; i <= Link.getMax(); i++)
+                {
+                    int j = 0; if(i%8 == 1) j= (i-1) / 8;
+                    if (i % 2 == 1)
+                    {
+                        spriteBatch.Draw(heartsSheet, new Rectangle((175 + (4 * i)) * resScale, (40 - (j * 10)) * resScale, 7 * resScale, 8 * resScale),
+                              new Rectangle(2, 10, 7, 8), Color.White);      //MAX HP.
+
+                        spriteBatch.Draw(heartsSheet, new Rectangle((175 + (4*i)) * resScale, (40 - (j*10)) * resScale, 4 * resScale, 8 * resScale),
+                            new Rectangle(1, 1, 4, 8), Color.White);        //Current HP, left half.
+                    }
+                    else
+                    {
+                        spriteBatch.Draw(heartsSheet, new Rectangle((174 + (4 * i)) * resScale, (40 - (j * 10)) * resScale, 4 * resScale, 8 * resScale),
+                            new Rectangle(6, 1, 4, 8), Color.White);        //Current HP, right half.
+                    }
+                }
 
             }
 
