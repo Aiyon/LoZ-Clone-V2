@@ -45,16 +45,18 @@ namespace Legend_of_Zelda_Clone
 
         Vector2 resolution = new Vector2(256,224);  //IS NOT 240, is 224!
         int resScale = 1;
-
+        
         Vector2 viewPort;
 
         private Texture2D empty;
         private Texture2D OWSpriteSheet;
+        private Texture2D UW1Sheet;
         private Texture2D heartsSheet;
         private Texture2D caveMap;
         private Texture2D equippedFrame;
 
         private SpriteFont LoZText;
+        private int LTLength;
 
         private string[] caveText;  //38 of them, not counting stairs down or dungeons.
         private int[] caveNPC;
@@ -99,9 +101,11 @@ namespace Legend_of_Zelda_Clone
             equippedFrame = Content.Load<Texture2D>("ItemFrame");
             LoZText = Content.Load<SpriteFont>("Pixel Emulator");
 
+            UW1Sheet = Content.Load<Texture2D>("UW");
+
             currentState = Globals.gState.overworld;
 
-            numT = 3;
+            numT = 6;
             tStart = new Vector2[numT];
             tSMap = new Globals.gState[numT];
             tDest = new Vector2[numT];
@@ -110,6 +114,7 @@ namespace Legend_of_Zelda_Clone
             string tileString;
             string colString;
             string caveColString;
+            string UW1ColString;
             using (StreamReader sr = new StreamReader("OWTileMap.txt"))
             {
                 tileString = sr.ReadLine();
@@ -128,6 +133,14 @@ namespace Legend_of_Zelda_Clone
                 for (int i = 0; i < 45; i++)
                 {
                     caveColString += sr.ReadLine();
+                }
+            }
+            using (StreamReader sr = new StreamReader("UW1Collision.txt"))
+            {
+                UW1ColString = sr.ReadLine();
+                for (int i = 0; i < 87; i++)
+                {
+                    UW1ColString += sr.ReadLine();
                 }
             }
             using (StreamReader sr = new StreamReader("Transitions.txt"))
@@ -156,6 +169,7 @@ namespace Legend_of_Zelda_Clone
             string[] tsSplit = tileString.Split(' ');
             string[] colSplit = colString.Split(' ');
             string[] caveSplit = caveColString.Split(' ');
+            string[] uw1Split = UW1ColString.Split(' ');
 
             for (int j = 0; j < 88; j++)
             {
@@ -173,6 +187,18 @@ namespace Legend_of_Zelda_Clone
                     }
                     else
                         collisionMap[i, j] = 0;
+
+                    if (uw1Split[(j * 256) + i] == "X" || uw1Split[(j * 256) + i] == "0")
+                    {
+                        UWCMap1[i, j] = 1;
+                    }
+                    else if (uw1Split[(j * 256) + i] == "T")
+                    {
+                        UWCMap1[i, j] = 2;
+                    }
+                    else
+                        UWCMap1[i, j] = 0;
+                       
 
                     if (i < 64 && j < 44)
                     {
@@ -212,6 +238,7 @@ namespace Legend_of_Zelda_Clone
 
             updatePlayer(gameTime.ElapsedGameTime.TotalSeconds);
             //
+            if(currentState == Globals.gState.caves) caveUpdate();
 
             base.Update(gameTime);
         }
@@ -291,7 +318,7 @@ namespace Legend_of_Zelda_Clone
                 movCheck += movAmount;
 
                 //CHECK 1 - if player position would go off edge of map: zone transition.
-                if (currentState != Globals.gState.caves) //Check not needed for caves as caves are all singular zones that operate off transition tiles instead of edges.
+                if (currentState == Globals.gState.overworld) //Check not needed for caves as caves are all singular zones that operate off transition tiles instead of edges.
                 {
                     Vector2 zoneCheck = (movCheck / new Vector2(16)) + offsetPos - viewPort;
                     if (zoneCheck.X < 0)
@@ -320,6 +347,35 @@ namespace Legend_of_Zelda_Clone
                         tempSteps = 20;
                     }
                 }
+                else if (currentState != Globals.gState.caves)
+                {
+                    Vector2 zoneCheck = (movCheck / new Vector2(16)) + offsetPos - viewPort;
+                    if (zoneCheck.X < 1)
+                    {
+                        offsetPos = Link.getPos();
+                        mapChange = true;
+                        MCDir = new Vector2(-1, 0);
+                        tempSteps = 20;
+                    }
+                    else if (zoneCheck.X > 15)
+                    {
+                        mapChange = true;
+                        MCDir = new Vector2(1, 0);
+                        tempSteps = 20;
+                    }
+                    else if (zoneCheck.Y < 1)
+                    {
+                        mapChange = true;
+                        MCDir = new Vector2(0, -1);
+                        tempSteps = 20;
+                    }
+                    else if (zoneCheck.Y > 9.5)
+                    {
+                        mapChange = true;
+                        MCDir = new Vector2(0, 1);
+                        tempSteps = 20;
+                    }
+                }
 
                 //CHECK 2 - if player would start to move inside a wall
                 switch (currentState)
@@ -339,14 +395,14 @@ namespace Legend_of_Zelda_Clone
                         break;
 
                     case Globals.gState.dungeon1:
-                        if (!checkCollision(offsetPos, movCheck, UWMap1))
+                        if (!checkCollision(offsetPos, movCheck, UWCMap1))
                         {
                             Link.move(movAmount / 16);
                         }
                         break;
 
                     case Globals.gState.dungeon2:
-                        if (!checkCollision(offsetPos, movCheck, UWMap2))
+                        if (!checkCollision(offsetPos, movCheck, UWCMap2))
                         {
                             Link.move(movAmount / 16);
                         }
@@ -374,8 +430,17 @@ namespace Legend_of_Zelda_Clone
 
                 viewPort.X += 0.8f * MCDir.X;   //moving up or left from start zone breaks collision. Down and right do not. - FIXED
                 viewPort.Y += 0.55f * MCDir.Y;
-                Link.move(new Vector2(MCDir.X * 0.05f, MCDir.Y * 0.075f));    //Link moves one tile so as to stay on screen
-                tempSteps--;
+
+                if (currentState == Globals.gState.overworld)
+                {
+                    Link.move(new Vector2(MCDir.X * 0.05f, MCDir.Y * 0.075f));    //Link moves one tile so as to stay on screen
+                    tempSteps--;
+                }
+                else if (currentState != Globals.gState.caves)
+                {
+                    Link.move(new Vector2(MCDir.X * 0.15f, MCDir.Y * 0.225f));    //Link moves two extra tiles to offset the walls.
+                    tempSteps--;
+                }
             }
             else
             {
@@ -384,6 +449,12 @@ namespace Legend_of_Zelda_Clone
                 viewPort.Y = (float)Math.Round(viewPort.Y, 0);  //as a result, int conversions truncated the value from .9999 to .0, rather than round.
 
             }
+        }
+
+        protected void caveUpdate()
+        {
+            //IF FIRST TIME IN CAVE, DO INTRO SHIZZLE (draw text).
+
         }
 
         /// <summary>
@@ -419,6 +490,23 @@ namespace Legend_of_Zelda_Clone
                 }
                                 
             }
+            //DUNGEON SET 1 DRAW
+            else if (currentState == Globals.gState.dungeon1)
+            {
+                spriteBatch.Draw(UW1Sheet, new Rectangle(0, Globals.UIOffset * resScale, 256 * resScale, 176 * resScale),
+                    new Rectangle((int)(viewPort.X*16), (int)(viewPort.Y*16), 256, 176), Color.White);  //draws current room using TileMap.
+
+                /*for (int j = 0; j < 11; j++)
+                {
+                    Vector2 temp = Link.getPos();
+
+                    for (int i = 0; i < 16; i++)
+                    {
+                        if (UWCMap1[i + (int)viewPort.X, j + (int)viewPort.Y] == 1)
+                        { spriteBatch.Draw(empty, new Rectangle(i * 16 * resScale, ((j * 16) + Globals.UIOffset) * resScale, 16 * resScale, 16 * resScale), new Color(212, 0, 212)); }      //Overlays map with collision map to confirm it matches.
+                    } 
+                } // */
+            }
             //CAVE DRAW
             else if (currentState == Globals.gState.caves)
             {
@@ -439,7 +527,7 @@ namespace Legend_of_Zelda_Clone
 
                 //DRAW ANIMATED FIRE.
 
-                //IF FIRST TIME IN CAVE, DO INTRO SHIZZLE (draw text).
+
 
 
 
@@ -457,21 +545,21 @@ namespace Legend_of_Zelda_Clone
                 spriteBatch.Draw(empty, new Rectangle(0, 0, 256 * resScale, Globals.UIOffset * resScale), Color.Black);
 
                 //draw frames
-                spriteBatch.Draw(equippedFrame, new Rectangle(123, 19, 18, 26), Color.White);   
-                spriteBatch.Draw(equippedFrame, new Rectangle(147, 19, 18, 26), Color.White);
+                spriteBatch.Draw(equippedFrame, new Rectangle(123*resScale, 19*resScale, 18*resScale, 26*resScale), Color.White);   
+                spriteBatch.Draw(equippedFrame, new Rectangle(147*resScale, 19*resScale, 18*resScale, 26*resScale), Color.White);
 
                 //draw minimap
-                spriteBatch.Draw(empty, new Rectangle(16, 16, 64, 32), Color.Gray);
-                spriteBatch.Draw(empty, new Rectangle((int)(viewPort.X/3.84f) + 16, (int)(viewPort.Y / 2.75f) + 16, 3, 3), Color.LimeGreen); 
+                spriteBatch.Draw(empty, new Rectangle(16*resScale, 16*resScale, 64*resScale, 32*resScale), Color.Gray);
+                spriteBatch.Draw(empty, new Rectangle(((int)(viewPort.X/3.84f) + 16)*resScale, ((int)(viewPort.Y / 2.75f) + 16)*resScale, 3*resScale, 3*resScale), Color.LimeGreen); 
 
                 //draw text
-                spriteBatch.DrawString(LoZText, "B", new Vector2(128, 13), Color.White); //all text positions -3 from where they should be to offset blank space at top of font.
-                spriteBatch.DrawString(LoZText, "A", new Vector2(152, 13), Color.White);
-                spriteBatch.DrawString(LoZText, "-LIFE-", new Vector2(184, 13), Color.Red);
+                spriteBatch.DrawString(LoZText, "B", new Vector2(128*resScale, 13*resScale), Color.White); //all text positions -3 from where they should be to offset blank space at top of font.
+                spriteBatch.DrawString(LoZText, "A", new Vector2(152*resScale, 13*resScale), Color.White);
+                spriteBatch.DrawString(LoZText, "-LIFE-", new Vector2(184*resScale, 13*resScale), Color.Red);
 
-                spriteBatch.DrawString(LoZText, "X0", new Vector2(96, 13), Color.White);
-                spriteBatch.DrawString(LoZText, "X0", new Vector2(96, 29), Color.White);
-                spriteBatch.DrawString(LoZText, "X0", new Vector2(96, 37), Color.White);
+                spriteBatch.DrawString(LoZText, "X0", new Vector2(96*resScale, 13*resScale), Color.White);
+                spriteBatch.DrawString(LoZText, "X0", new Vector2(96*resScale, 29*resScale), Color.White);
+                spriteBatch.DrawString(LoZText, "X0", new Vector2(96*resScale, 37*resScale), Color.White);
 
                 for (int i = 1; i <= Link.getMax(); i++)
                 {
