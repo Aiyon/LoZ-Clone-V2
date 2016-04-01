@@ -105,7 +105,7 @@ namespace Legend_of_Zelda_Clone
 
             currentState = Globals.gState.overworld;
 
-            numT = 6;
+            numT = 9;
             tStart = new Vector2[numT];
             tSMap = new Globals.gState[numT];
             tDest = new Vector2[numT];
@@ -276,6 +276,7 @@ namespace Legend_of_Zelda_Clone
                 moving = true;
             }
 
+            
             //CHECK 0.5 - if player is on a transition tile.
             //N.B. - Has to be at start so as to be before movement position checks are made, because collision uses offsetPos. Will also mean player finishes movement before activating animation
             for (int i = 0; i < numT; i++)
@@ -294,6 +295,7 @@ namespace Legend_of_Zelda_Clone
                         viewPort = tDest[i] - vTemp;
                         currentState = tDMap[i];
                         Link.move(tDest[i]);
+                        mapChange = false;
                     }
                 }
                 /*else if (currentState == tDMap[i])
